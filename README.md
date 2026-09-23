@@ -280,7 +280,7 @@ flowchart TD
     E --> F([End])
 ```
 
-The program calls as below:
+#### 2. Call Diagram
 
 ```mermaid
 flowchart TD
@@ -293,31 +293,6 @@ flowchart TD
     MS --> MD[match_dst]
     Match --> G[get_packets_actions]
     G --> NU[network_utils.is_in_port_range]
-```
-
-#### 2. Input/Output/Environment Diagram
-
-```mermaid
-flowchart LR
-    subgraph Input
-        R[rules.txt]
-        P[packets.txt]
-    end
-    subgraph Python
-        M[main.py]
-        BT[binary_tree.py]
-        NU[network_utils.py]
-    end
-    subgraph Output
-        O[report.txt]
-    end
-    R --> M
-    P --> M
-    M --> BT
-    M --> NU
-    BT --> M
-    NU --> M
-    M --> O
 ```
 
 #### 3. Project structure diagram
